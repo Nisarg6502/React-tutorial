@@ -1,12 +1,16 @@
 import './ExpenseItems.css';
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+    // const expenseDate = new Date(2022, 4, 10);
+    // const expenseTitle = 'First Book - The Anthem of My Heart';
+    // const expenseAmount = 150;
+
     return (
         <div className="expense-item">
-            <div>10th April 2022</div>
+            <div>{props.date.toDateString()}</div>
             <div className="expense-item__description">
-                <h2>First Book - The Anthem of My Heart</h2>
-                <div className="expense-item__price">150 Rupees</div>
+                <h2>{props.title}</h2>
+                <div className="expense-item__price">{props.amount}</div>
             </div>
         </div>
     );
