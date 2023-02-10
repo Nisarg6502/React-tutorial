@@ -1,5 +1,6 @@
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItems.css';
+import Card from './Card';
 
 function ExpenseItem(props) {
     // const expenseDate = new Date(2022, 4, 10);
@@ -11,13 +12,13 @@ function ExpenseItem(props) {
 
 
     return (
-        <div className="expense-item">
+        <Card className="expense-item">
             <ExpenseDate date={props.date}></ExpenseDate> {/*props are used to send data to child nodes*/}
             <div className="expense-item__description">
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">{props.amount}</div>
             </div>
-        </div>
+        </Card>
     );
 }
 
