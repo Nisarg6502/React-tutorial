@@ -1,6 +1,6 @@
 import './Card.css'
 
-function Card(props) {
+const Card = (props) => {
     const classes = 'card ' + props.className //used so that children props' classes can be 
     //utilised by parent prop a.k.a these cards compistions. Here we have used classnames of 
     //Expense.js and ExpenseItems.js which is contained in props.classNames
